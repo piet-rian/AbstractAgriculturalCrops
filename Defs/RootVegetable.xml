@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    根菜(Root Vegetable)
+    https://github.com/piet-rian/AbstractAgriculturalCrops/wiki/%E6%A0%B9%E8%8F%9C
+-->
+<Defs>
+    <!-- VegetableOrFruit -->
+
+    <ThingDef ParentName="PlantFoodRawBase">
+        <defName>AAC_RawRootVegetable</defName>
+        <label>root vegetable</label>
+        <description>not a potato.</description>
+        <possessionCount>10</possessionCount>
+        <graphicData>
+            <!-- /Textures フォルダ以下に同等の階層のフォルダを作り、そのフォルダにフォルダ名と同じ名称のpngを配置する -->
+            <texPath>Things/Item/Resource/PlantFoodRaw/RootVegetable</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.1</MarketValue>
+        </statBases>
+        <ingestible>
+            <foodType>VegetableOrFruit</foodType>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <!-- 腐敗日数: イモ30, コメ40 の中間 -->
+                <daysToRotStart>35</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Plant -->
+
+    <ThingDef Name="PotatoPlant" ParentName="PlantBase">
+        <defName>AAC_PlantRootVegetable</defName>
+        <label>root vegetable plant</label>
+        <description>not a potato.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.25</Nutrition>
+        </statBases>
+        <graphicData>
+            <!-- /Textures フォルダ以下に同等の階層のフォルダを作り、そのフォルダにフォルダ名と同じ名称のpngを配置する -->
+            <texPath>Things/Plant/RootVegetable</texPath>
+        </graphicData>
+        <selectable>true</selectable>
+        <pathCost>14</pathCost>
+        <ingestible />
+        <plant>
+            <!-- 肥沃土の影響: イモ0.4, コメ等1.0 であるため間を取って 0.75 -->
+            <fertilitySensitivity>0.75</fertilitySensitivity>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestTag>Standard</harvestTag>
+
+            <!-- 収穫できる作物: 根菜を指定 -->
+            <harvestedThingDef>AAC_RawRootVegetable</harvestedThingDef>
+
+            <!-- 収穫量: growDaysを先に決めて 効率(harvestYield/growDays) が 2.1 を超えない範囲で調整 -->
+            <harvestYield>9</harvestYield>
+            <sowTags>
+                <li>Ground</li>
+                <li>Hydroponic</li>
+            </sowTags>
+            <topWindExposure>0.1</topWindExposure>
+
+            <!-- 生長時間(日): イモ5.8, コメ3.0 なので中間を取る  -->
+            <growDays>4.4</growDays>
+            <visualSizeRange>0.3~1.05</visualSizeRange>
+            <wildOrder>2</wildOrder>
+            <purpose>Food</purpose>
+            <humanFoodPlant>true</humanFoodPlant>
+        </plant>
+    </ThingDef>
+</Defs>
