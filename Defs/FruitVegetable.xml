@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    果菜(Fruit Vegetable)
+    https://github.com/piet-rian/AbstractAgriculturalCrops/wiki/%E6%9E%9C%E8%8F%9C
+-->
+<Defs>
+    <!-- VegetableOrFruit -->
+
+    <ThingDef ParentName="PlantFoodRawBase">
+        <defName>AAC_RawFruitVegetable</defName>
+        <label>fruit vegetable</label>
+        <description>not a corn.</description>
+        <possessionCount>10</possessionCount>
+        <graphicData>
+            <texPath>Things/Item/Resource/PlantFoodRaw/FruitVegetable</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.2</MarketValue>
+            <Mass>0.027</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <!-- 腐敗日数: イモ30より短め、葉茎菜よりは長めに -->
+                <daysToRotStart>15</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <ingestible>
+            <foodType>VegetableOrFruit</foodType>
+        </ingestible>
+    </ThingDef>
+
+    <!-- Plant -->
+
+    <ThingDef ParentName="PlantBase">
+        <defName>AAC_PlantFruitVegetable</defName>
+        <label>fruit vegetable plant</label>
+        <description>not a corn.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.25</Nutrition>
+        </statBases>
+        <graphicData>
+            <!-- /Textures フォルダ以下に同等の階層のフォルダを作り、そのフォルダにフォルダ名と同じ名称のpngを配置する -->
+            <texPath>Things/Plant/FruitVegetable</texPath>
+        </graphicData>
+        <selectable>true</selectable>
+        <pathCost>14</pathCost>
+        <ingestible />
+        <plant>
+            <!-- 肥沃土の影響: イモ0.4, コメ等1.0 であるため間を取って 0.75 -->
+            <fertilitySensitivity>0.75</fertilitySensitivity>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestTag>Standard</harvestTag>
+
+            <!-- 収穫できる作物: 葉茎菜を指定 -->
+            <harvestedThingDef>AAC_RawFruitVegetable</harvestedThingDef>
+
+            <!-- 収穫量: growDaysを先に決めて 効率(harvestYield/growDays) が 2.1 を超えない範囲で調整 -->
+            <harvestYield>17</harvestYield>
+            <sowTags>
+                <li>Ground</li>
+                <li>Hydroponic</li>
+            </sowTags>
+            <topWindExposure>0.1</topWindExposure>
+
+            <!-- 生長時間(日): イモ5.8, トウモロコシ11.3 なので中間を取る  -->
+            <growDays>8.6</growDays>
+            <visualSizeRange>0.3~1.05</visualSizeRange>
+            <wildOrder>2</wildOrder>
+            <purpose>Food</purpose>
+            <humanFoodPlant>true</humanFoodPlant>
+        </plant>
+    </ThingDef>
+</Defs>
