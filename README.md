@@ -11,5 +11,5 @@
 
 ## CONTRIBUTING
 
-[コントリビューションガイドライン](docs/CONTRIBUTING.md) および
+[リポジトリに対する各種貢献についての指針](https://github.com/piet-rian/.github/blob/main/CONTRIBUTING.md) および
 [LICENSE](LICENSE) を参照の上でお願いします。
