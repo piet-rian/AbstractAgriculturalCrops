@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: root vegetable plant -->
+  <AAC_PlantRootVegetable.label>根菜</AAC_PlantRootVegetable.label>
+  <!-- EN: not a potato. -->
+  <AAC_PlantRootVegetable.description>根を食用する野菜です。ジャガイモより早く成長しますが、そのぶん収穫量は控えめです。肥沃度の影響もジャガイモより強く受けます。</AAC_PlantRootVegetable.description>
+
+  <!-- EN: root vegetable -->
+  <AAC_RawRootVegetable.label>根菜(生)</AAC_RawRootVegetable.label>
+  <!-- EN: not a potato. -->
+  <AAC_RawRootVegetable.description>土から取り出した根っこです。よく洗ってから調理して食べましょう。</AAC_RawRootVegetable.description>
+
+</LanguageData>

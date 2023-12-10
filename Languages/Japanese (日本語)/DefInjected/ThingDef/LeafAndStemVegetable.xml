@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: leaf And stem vegetable plant -->
+  <AAC_PlantLeafAndStemVegetable.label>葉茎菜</AAC_PlantLeafAndStemVegetable.label>
+  <!-- EN: not a onion. -->
+  <AAC_PlantLeafAndStemVegetable.description>葉や茎を主に食用とする野菜です。米以上に早く成長しますが、その分収穫量も控えめです。肥沃度の影響を強く受けるため、水耕栽培にも適しています。</AAC_PlantLeafAndStemVegetable.description>
+
+  <!-- EN: leaf and stem vegetable -->
+  <AAC_RawLeafAndStemVegetable.label>葉茎菜(生)</AAC_RawLeafAndStemVegetable.label>
+  <!-- EN: not a onion. -->
+  <AAC_RawLeafAndStemVegetable.description>菜っ葉です。とても痛みやすいです。生で食べても大丈夫ですが、調理するほうが無難でしょう。</AAC_RawLeafAndStemVegetable.description>
+
+</LanguageData>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: fruit vegetable plant -->
+  <AAC_PlantFruitVegetable.label>果菜</AAC_PlantFruitVegetable.label>
+  <!-- EN: not a corn. -->
+  <AAC_PlantFruitVegetable.description>果実を食用する野菜です。ジャガイモより成長に時間がかかりますが、収穫量は上回ります。肥沃度の影響もジャガイモより強く受けます。</AAC_PlantFruitVegetable.description>
+
+  <!-- EN: fruit vegetable -->
+  <AAC_RawFruitVegetable.label>果菜(生)</AAC_RawFruitVegetable.label>
+  <!-- EN: not a corn. -->
+  <AAC_RawFruitVegetable.description>果実です。ベリーと同程度に痛みやすいので気をつけてください。調理して食べたほうが良いでしょう。</AAC_RawFruitVegetable.description>
+
+</LanguageData>
