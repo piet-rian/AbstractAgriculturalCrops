@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    葉茎菜(LeafAndStem And Stem Vegetable)
+    https://github.com/piet-rian/AbstractAgriculturalCrops/wiki/%E8%91%89%E8%8C%8E%E8%8F%9C
+-->
+<Defs>
+    <!-- VegetableOrFruit -->
+
+    <ThingDef ParentName="PlantFoodRawBase">
+        <defName>AAC_RawLeafAndStemVegetable</defName>
+        <label>leaf and stem vegetable</label>
+        <description>not a onion.</description>
+        <possessionCount>10</possessionCount>
+        <graphicData>
+            <texPath>Things/Item/Resource/PlantFoodRaw/LeafAndStemVegetable</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.2</MarketValue>
+            <Mass>0.027</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <!-- 腐敗日数: ベリー14より短い -->
+                <daysToRotStart>7</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <ingestible>
+            <preferability>RawTasty</preferability>
+            <tasteThought></tasteThought>
+            <foodType>VegetableOrFruit</foodType>
+        </ingestible>
+    </ThingDef>
+
+    <!-- Plant -->
+
+    <ThingDef ParentName="PlantBase">
+        <defName>AAC_PlantLeafAndStemVegetable</defName>
+        <label>leaf And stem vegetable plant</label>
+        <description>not a onion.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.25</Nutrition>
+        </statBases>
+        <graphicData>
+            <!-- /Textures フォルダ以下に同等の階層のフォルダを作り、そのフォルダにフォルダ名と同じ名称のpngを配置する -->
+            <texPath>Things/Plant/LeafAndStemVegetable</texPath>
+        </graphicData>
+        <selectable>true</selectable>
+        <pathCost>14</pathCost>
+        <ingestible />
+        <plant>
+            <!-- 肥沃度の下限: 砂利(70%)より上(普通の土)でないと育たないようにする、特徴づけとして -->
+            <fertilityMin>0.71</fertilityMin>
+            <!-- 肥沃土の影響: コメ等1.0 以上 -->
+            <fertilitySensitivity>1.2</fertilitySensitivity>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestTag>Standard</harvestTag>
+
+            <!-- 収穫できる作物: 葉茎菜を指定 -->
+            <harvestedThingDef>AAC_RawLeafAndStemVegetable</harvestedThingDef>
+
+            <!-- 収穫量: growDaysを先に決めて 効率(harvestYield/growDays) が 2.1 を超えない範囲で調整 -->
+            <harvestYield>3</harvestYield>
+            <sowTags>
+                <li>Ground</li>
+                <li>Hydroponic</li>
+            </sowTags>
+            <topWindExposure>0.1</topWindExposure>
+
+            <!-- 生長時間(日): コメ3.0より短く  -->
+            <growDays>1.5</growDays>
+            <visualSizeRange>0.3~1.05</visualSizeRange>
+            <wildOrder>2</wildOrder>
+            <purpose>Food</purpose>
+            <humanFoodPlant>true</humanFoodPlant>
+        </plant>
+    </ThingDef>
+</Defs>
