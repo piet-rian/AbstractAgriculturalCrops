@@ -7,7 +7,7 @@
   <AAC_PlantGrain.description>実態は麦です。トウモロコシ以上に成長に時間を要しますが、収穫量もそれを上回ります。</AAC_PlantGrain.description>
   
   <!-- EN: grain -->
-  <AAC_RawGrain.label>穀物</AAC_RawGrain.label>
+  <AAC_RawGrain.label>穀物(生)</AAC_RawGrain.label>
   <!-- EN: not a corn, bean and rice. -->
   <AAC_RawGrain.description>実態は麦です。収穫と同時に脱穀等も済ませてあります。調理して食べたほうが良いでしょう。</AAC_RawGrain.description>
   
