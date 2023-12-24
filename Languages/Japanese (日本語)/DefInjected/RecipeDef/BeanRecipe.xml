@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Make milk from bean -->
+  <AAC_Make_Milk.label>豆からミルクを作る</AAC_Make_Milk.label>
+  <!-- EN: Make milk from bean. -->
+  <AAC_Make_Milk.description>豆からミルクを20作ります。制作の過程でいくらかの栄養価が失われます。</AAC_Make_Milk.description>
+  <!-- EN: beans -->
+  <AAC_Make_Milk.ingredients.0.filter.customSummary>豆</AAC_Make_Milk.ingredients.0.filter.customSummary>
+  <!-- EN: Making milk. -->
+  <AAC_Make_Milk.jobString>豆からミルクを作っています</AAC_Make_Milk.jobString>
+  
+  <!-- EN: Make milk from bean(bulk) -->
+  <AAC_Make_Milk_Bulk.label>豆からミルクをまとめて作る</AAC_Make_Milk_Bulk.label>
+  <!-- EN: Make milk from bean(bulk). -->
+  <AAC_Make_Milk_Bulk.description>豆からミルクを80作ります。制作の過程でいくらかの栄養価が失われます。</AAC_Make_Milk_Bulk.description>
+  <!-- EN: beans -->
+  <AAC_Make_Milk_Bulk.ingredients.0.filter.customSummary>豆</AAC_Make_Milk_Bulk.ingredients.0.filter.customSummary>
+  <!-- EN: Making milk. -->
+  <AAC_Make_Milk_Bulk.jobString>豆からミルクを作っています</AAC_Make_Milk_Bulk.jobString>
+  
+</LanguageData>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    豆(Bean)
+    https://github.com/piet-rian/AbstractAgriculturalCrops/wiki/%E8%B1%86
+-->
+<Defs>
+    <!-- AAC_RawBean -->
+
+    <ThingDef ParentName="PlantFoodRawBase">
+        <defName>AAC_RawBean</defName>
+        <label>bean</label>
+        <description>this is bean.</description>
+        <possessionCount>10</possessionCount>
+        <graphicData>
+            <!-- /Textures フォルダ以下に同等の階層のフォルダを作り、そのフォルダにフォルダ名と同じ名称のpngを配置する -->
+            <texPath>Things/Item/Resource/PlantFoodRaw/Bean</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.1</MarketValue>
+        </statBases>
+        <ingestible>
+            <foodType>Meat</foodType>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <!-- 腐敗日数: 豆は日持ちするのでトウモロコシと同じぐらいに -->
+                <daysToRotStart>60</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Plant -->
+
+    <ThingDef ParentName="PlantBase">
+        <defName>AAC_PlantBean</defName>
+        <label>bean plant</label>
+        <description>this is bean plant.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.25</Nutrition>
+        </statBases>
+        <graphicData>
+            <!-- /Textures フォルダ以下に同等の階層のフォルダを作り、そのフォルダにフォルダ名と同じ名称のpngを配置する -->
+            <texPath>Things/Plant/Bean</texPath>
+        </graphicData>
+        <selectable>true</selectable>
+        <pathCost>14</pathCost>
+        <ingestible />
+        <plant>
+            <!-- 肥沃土の影響: ジャガイモと同じ -->
+            <fertilitySensitivity>0.4</fertilitySensitivity>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestTag>Standard</harvestTag>
+
+            <!-- 収穫できる作物: 根菜を指定 -->
+            <harvestedThingDef>AAC_RawBean</harvestedThingDef>
+
+            <!-- 収穫量: growDaysを先に決めて 効率(harvestYield/growDays) が 2.1 を超えない範囲で調整 -->
+            <harvestYield>13</harvestYield>
+            <sowTags>
+                <li>Ground</li>
+            </sowTags>
+            <topWindExposure>0.1</topWindExposure>
+
+            <!-- 生長時間(日): ジャガイモより気持ち多め  -->
+            <growDays>6</growDays>
+            <visualSizeRange>0.5~1.05</visualSizeRange>
+            <wildOrder>2</wildOrder>
+            <purpose>Food</purpose>
+            <humanFoodPlant>true</humanFoodPlant>
+        </plant>
+    </ThingDef>
+</Defs>
