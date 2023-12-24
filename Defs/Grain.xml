@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    穀物(Grain)
+    https://github.com/piet-rian/AbstractAgriculturalCrops/wiki/%E7%A9%80%E7%89%A9
+-->
+<Defs>
+    <!-- AAC_RawGrain -->
+
+    <ThingDef ParentName="PlantFoodRawBase">
+        <defName>AAC_RawGrain</defName>
+        <label>grain</label>
+        <description>not a corn, bean and rice.</description>
+        <possessionCount>10</possessionCount>
+        <graphicData>
+            <!-- /Textures フォルダ以下に同等の階層のフォルダを作り、そのフォルダにフォルダ名と同じ名称のpngを配置する -->
+            <texPath>Things/Item/Resource/PlantFoodRaw/Grain</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.1</MarketValue>
+        </statBases>
+        <ingestible>
+            <foodType>VegetableOrFruit</foodType>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <!-- 腐敗日数: トウモロコシと同じ -->
+                <daysToRotStart>60</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Plant -->
+
+    <ThingDef ParentName="PlantBase">
+        <defName>AAC_PlantGrain</defName>
+        <label>grain plant</label>
+        <description>not a corn, bean and rice.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.25</Nutrition>
+        </statBases>
+        <graphicData>
+            <!-- /Textures フォルダ以下に同等の階層のフォルダを作り、そのフォルダにフォルダ名と同じ名称のpngを配置する -->
+            <texPath>Things/Plant/Grain</texPath>
+        </graphicData>
+        <selectable>true</selectable>
+        <pathCost>14</pathCost>
+        <ingestible />
+        <plant>
+            <!-- 肥沃土の影響: トウモロコシと同じ -->
+            <fertilitySensitivity>0.70</fertilitySensitivity>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestTag>Standard</harvestTag>
+
+            <!-- 収穫できる作物: 根菜を指定 -->
+            <harvestedThingDef>AAC_RawGrain</harvestedThingDef>
+
+            <!-- 収穫量: growDaysを先に決めて 効率(harvestYield/growDays) が 2.1 を超えない範囲で調整 -->
+            <harvestYield>30</harvestYield>
+            <sowTags>
+                <li>Ground</li>
+            </sowTags>
+            <topWindExposure>0.1</topWindExposure>
+
+            <!-- 生長時間(日): トウモロコシが 11.3 なので更に長く  -->
+            <growDays>14.4</growDays>
+            <visualSizeRange>0.5~1.05</visualSizeRange>
+            <wildOrder>2</wildOrder>
+            <purpose>Food</purpose>
+            <humanFoodPlant>true</humanFoodPlant>
+        </plant>
+    </ThingDef>
+</Defs>
