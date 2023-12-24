@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RecipeDef>
+        <defName>AAC_Make_Milk</defName>
+        <label>Make milk from bean</label>
+        <description>Make milk from bean.</description>
+        <jobString>Making milk.</jobString>
+        <workAmount>100</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <customSummary>beans</customSummary>
+                    <thingDefs>
+                        <li>AAC_RawBean</li>
+                    </thingDefs>
+                </filter>
+                <count>1.5</count>
+            </li>
+        </ingredients>
+        <products>
+            <Milk>20</Milk>
+        </products>
+        <fixedIngredientFilter>
+            <categories>
+                <li>FoodRaw</li>
+            </categories>
+            <thingDefs>
+                <li>AAC_RawBean</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Cooking</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>AAC_Make_Milk_Bulk</defName>
+        <label>Make milk from bean(bulk)</label>
+        <description>Make milk from bean(bulk).</description>
+        <jobString>Making milk.</jobString>
+        <workAmount>400</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <customSummary>beans</customSummary>
+                    <thingDefs>
+                        <li>AAC_RawBean</li>
+                    </thingDefs>
+                </filter>
+                <count>6</count>
+            </li>
+        </ingredients>
+        <products>
+            <Milk>80</Milk>
+        </products>
+        <fixedIngredientFilter>
+            <categories>
+                <li>FoodRaw</li>
+            </categories>
+            <thingDefs>
+                <li>AAC_RawBean</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Cooking</workSkill>
+    </RecipeDef>
+</Defs>
