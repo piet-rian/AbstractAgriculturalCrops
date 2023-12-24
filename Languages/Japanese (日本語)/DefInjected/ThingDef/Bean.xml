@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: bean plant -->
+  <AAC_PlantBean.label>豆</AAC_PlantBean.label>
+  <!-- EN: bean but meat. -->
+  <AAC_PlantBean.description>マメ科の植物です。概ねジャガイモと同程度の成長速度と収量ですが、若干それぞれ多めです。</AAC_PlantBean.description>
+  
+  <!-- EN: bean -->
+  <AAC_RawBean.label>豆(生)</AAC_RawBean.label>
+  <!-- EN: this is bean. -->
+  <AAC_RawBean.description>豆です。加工することによってミルクまたは代用肉にすることができます。生野菜として調理することもできます。</AAC_RawBean.description>
+  
+</LanguageData>
