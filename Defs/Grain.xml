@@ -49,7 +49,7 @@
         <ingestible />
         <plant>
             <!-- 肥沃土の影響: トウモロコシと同じ -->
-            <fertilitySensitivity>0.70</fertilitySensitivity>
+            <fertilitySensitivity>1.0</fertilitySensitivity>
             <dieIfLeafless>true</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
 
@@ -57,14 +57,14 @@
             <harvestedThingDef>AAC_RawGrain</harvestedThingDef>
 
             <!-- 収穫量: growDaysを先に決めて 効率(harvestYield/growDays) が 2.1 を超えない範囲で調整 -->
-            <harvestYield>30</harvestYield>
+            <harvestYield>38</harvestYield>
             <sowTags>
                 <li>Ground</li>
             </sowTags>
             <topWindExposure>0.1</topWindExposure>
 
             <!-- 生長時間(日): トウモロコシが 11.3 なので更に長く  -->
-            <growDays>14.4</growDays>
+            <growDays>18.8</growDays>
             <visualSizeRange>0.5~1.05</visualSizeRange>
             <wildOrder>2</wildOrder>
             <purpose>Food</purpose>
