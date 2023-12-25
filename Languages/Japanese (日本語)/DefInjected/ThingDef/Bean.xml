@@ -9,6 +9,6 @@
   <!-- EN: bean -->
   <AAC_RawBean.label>豆(生)</AAC_RawBean.label>
   <!-- EN: this is bean. -->
-  <AAC_RawBean.description>豆です。加工することによってミルクまたは代用肉にすることができます。生野菜として調理することもできます。</AAC_RawBean.description>
+  <AAC_RawBean.description>豆です。生で食べると非常に高い確率で食中毒を誘発するため調理して食べましょう。加工することによってミルクが作れます。</AAC_RawBean.description>
   
 </LanguageData>

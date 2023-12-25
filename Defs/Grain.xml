@@ -17,6 +17,7 @@
         </graphicData>
         <statBases>
             <MarketValue>1.1</MarketValue>
+            <FoodPoisonChanceFixedHuman>0.60</FoodPoisonChanceFixedHuman>
         </statBases>
         <ingestible>
             <foodType>VegetableOrFruit</foodType>
