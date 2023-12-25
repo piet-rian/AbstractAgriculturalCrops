@@ -20,11 +20,11 @@
                         <li>AAC_RawBean</li>
                     </thingDefs>
                 </filter>
-                <count>1.5</count>
+                <count>1</count>
             </li>
         </ingredients>
         <products>
-            <Milk>20</Milk>
+            <Milk>15</Milk>
         </products>
         <fixedIngredientFilter>
             <categories>
@@ -60,11 +60,11 @@
                         <li>AAC_RawBean</li>
                     </thingDefs>
                 </filter>
-                <count>6</count>
+                <count>5</count>
             </li>
         </ingredients>
         <products>
-            <Milk>80</Milk>
+            <Milk>75</Milk>
         </products>
         <fixedIngredientFilter>
             <categories>
