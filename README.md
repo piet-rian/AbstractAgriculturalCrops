@@ -46,9 +46,6 @@ Variety Matters 系の Mod と併用すること想定しています。
 
 本 Mod は [BSD 3-Clause “New” or “Revised” License](LICENSE) で提供されています。
 
-## CONTRIBUTING
+プルリクエストおよびイシューについては [リポジトリに対する各種貢献についての指針](https://github.com/piet-rian/.github/blob/main/CONTRIBUTING.md) を参照した上でお願いします。
 
-[リポジトリに対する各種貢献についての指針](https://github.com/piet-rian/.github/blob/main/CONTRIBUTING.md) を参照した上でお願いします。
-
-ただし、テクスチャ画像の提供については積極的に受け入れています。  
-なお、バニラと比べて風合いが大きく異なる場合は断る場合があります。
+ただし、テクスチャ画像の提供については積極的に受け入れています。
